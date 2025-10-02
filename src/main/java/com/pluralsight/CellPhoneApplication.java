@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import java.util.Scanner;
+
 public class CellPhoneApplication {
     public static void main(String[] args) {
         CellPhone cellPhone1 = new CellPhone();
@@ -10,6 +12,26 @@ public class CellPhoneApplication {
         cellPhone1.setPhoneNumber("800-555-5555");
         cellPhone1.setOwner("Dana Wyatt");
         cellPhone1.display();
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("What is the serial number?");
+        String serialNumber = scanner.nextLine();
+
+        System.out.println("What model is the phone?");
+        String model = scanner.nextLine();
+
+        System.out.println("Who is the carrier?");
+        String carrier = scanner.nextLine();
+
+        System.out.println("What is the phone number?");
+        String phoneNumber = scanner.nextLine();
+
+        System.out.println("Who is the owner of the phone?");
+        String owner = scanner.nextLine();
+
+
+
 
 
     }
