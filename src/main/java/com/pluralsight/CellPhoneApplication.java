@@ -16,19 +16,19 @@ public class CellPhoneApplication {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("What is the serial number?");
-        String serialNumber = scanner.nextLine();
+        String serialNumber = scanner.nextLine().trim();
 
         System.out.println("What model is the phone?");
-        String model = scanner.nextLine();
+        String model = scanner.nextLine().trim();
 
         System.out.println("Who is the carrier?");
-        String carrier = scanner.nextLine();
+        String carrier = scanner.nextLine().trim();
 
         System.out.println("What is the phone number?");
-        String phoneNumber = scanner.nextLine();
+        String phoneNumber = scanner.nextLine().trim();
 
         System.out.println("Who is the owner of the phone?");
-        String owner = scanner.nextLine();
+        String owner = scanner.nextLine().trim();
 
 
 
