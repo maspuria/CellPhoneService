@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class CellPhoneApplication {
     public static void main(String[] args) {
         CellPhone cellPhone1 = new CellPhone();
+        Scanner scanner = new Scanner(System.in);
 
         cellPhone1.setSerialNumber("100000");
         cellPhone1.setModel("iPhoneX");
@@ -13,25 +14,24 @@ public class CellPhoneApplication {
         cellPhone1.setOwner("Dana Wyatt");
         cellPhone1.display();
 
-        Scanner scanner = new Scanner(System.in);
+        CellPhone cellPhone2 = new CellPhone();
 
         System.out.println("What is the serial number?");
-        String serialNumber = scanner.nextLine().trim();
+        cellPhone2.setSerialNumber(scanner.nextLine().trim());
 
         System.out.println("What model is the phone?");
-        String model = scanner.nextLine().trim();
+        cellPhone2.setModel(scanner.nextLine().trim());
 
         System.out.println("Who is the carrier?");
-        String carrier = scanner.nextLine().trim();
+        cellPhone2.setCarrier(scanner.nextLine().trim());
 
         System.out.println("What is the phone number?");
-        String phoneNumber = scanner.nextLine().trim();
+        cellPhone2.setPhoneNumber(scanner.nextLine().trim());
 
         System.out.println("Who is the owner of the phone?");
-        String owner = scanner.nextLine().trim();
+        cellPhone2.setPhoneNumber(scanner.nextLine().trim());
 
-
-
+        cellPhone2.display();
 
 
     }
