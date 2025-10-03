@@ -1,6 +1,7 @@
 package com.pluralsight;
 
 public class CellPhone {
+//  Field Members
     private int serialNumber;
     private String model;
     private String carrier;
@@ -49,11 +50,26 @@ public class CellPhone {
     public void setOwner(String owner) {
         this.owner = owner;
     }
-
+    //    Methods
     public void display() {
-        System.out.println(this.getSerialNumber() + " " + this.getModel() + " " +
-                this.getCarrier() + " " + this.getPhoneNumber() + " " + this.getOwner());
+        System.out.println("Serial Number = " + this.getSerialNumber() + ", Model = " + this.getModel()
+                + ", Carrier = " + this.getCarrier() + ", Phone Number = " + this.getPhoneNumber() + ", Owner = " + this.getOwner());
+    }
+//  OR
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("CellPhone{");
+        sb.append("serialNumber = ").append(serialNumber);
+        sb.append(", model = '").append(model).append('\'');
+        sb.append(", carrier = '").append(carrier).append('\'');
+        sb.append(", phoneNumber = '").append(phoneNumber).append('\'');
+        sb.append(", owner = '").append(owner).append('\'');
+        sb.append('}');
+        return sb.toString();
     }
 
+    public void dial(String phoneNumber) {
+        System.out.printf("%s's phone is calling %s", this.getOwner(), phoneNumber);
+    }
 
 }
